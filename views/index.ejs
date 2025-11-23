@@ -25,15 +25,11 @@
       <ul id="ingredientsList">
         <li><%= recipe.ingredients.protein.name %>, <%= recipe.ingredients.protein.preparation %></li>
         <li><%= recipe.ingredients.salsa.name %></li>
-        <li><% for( let index = 0; index < recipe.ingredients.toppings.length; index++ ) { %>
-          <%= recipe.ingredients.toppings[index].name %>, <%= recipe.ingredients.toppings[index].quantity %><br>
-          <% } %>
-        </li>
+        <% for( let index = 0; index < recipe.ingredients.toppings.length; index++ ) { %>
+          <li><%= recipe.ingredients.toppings[index].quantity %> of <%= recipe.ingredients.toppings[index].name %></li>
+        <% } %>
       </ul>
     <% } %>
-
-
-
   </div>
 </body>
 
